@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const Selected = ({ onAddPlayerClick, selectedProduct, handleDelete }) => {
+  // console.log(selectedProduct);
   console.log(selectedProduct);
   return (
     <div className="w-full h-screen mt-10">
@@ -44,5 +45,7 @@ const Selected = ({ onAddPlayerClick, selectedProduct, handleDelete }) => {
 
 Selected.propTypes = {
   onAddPlayerClick: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+  selectedProduct: PropTypes.array.isRequired,
 };
 export default Selected;

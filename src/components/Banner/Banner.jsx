@@ -21,7 +21,7 @@ const Banner = ({ addCoins }) => {
           Beyond Boundaries Beyond Limits
         </h3>
         <button
-          onClick={() => addCoins(10000000)}
+          onClick={() => addCoins(5000000)}
           className="btn bg-lime-500 text-black border-none"
         >
           Claims Free Credits

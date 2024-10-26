@@ -3,6 +3,8 @@ import "./App.css";
 import Banner from "./components/Banner/Banner";
 import ContentContainer from "./components/ContentContainer/ContentContainer";
 import Navbar from "./components/Navbar/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   // state declear
@@ -32,25 +34,32 @@ function App() {
   // coin
   const addCoins = (amount) => {
     setCoins(coins + amount);
+    toast.success(`You've claimed ${amount} free credits!`, {
+      position: "top-center",
+    });
   };
   // handle player selection
   const handleSelectedProduct = (product) => {
     if (selectedProduct.length >= 6) {
-      alert("You can only select a maximum of 6 players.");
+      toast.info("You can only select up to 6 players");
+      // alert("You can only select a maximum of 6 players.");
       return;
     }
     const isExist = selectedProduct.find(
       (p) => p.playerId === product.playerId
     );
     if (isExist) {
-      alert("Player is already selected");
+      toast.warn("Player is already selected");
+      // alert("Player is already selected");
     } else if (coins < product.biddingPrice) {
-      alert("Not enough coins to buy this player");
+      toast.error("Not enough coins to buy this player");
+      // alert("Not enough coins to buy this player");
     } else {
       // reduce coins by the bidding price
       setCoins(coins - product.biddingPrice);
       const newProducts = [...selectedProduct, product];
       setSelectedProduct(newProducts);
+      toast.success(`${product.name} has been added to your team`);
     }
   };
 
@@ -64,6 +73,7 @@ function App() {
         (p) => p.playerId !== playerId
       );
       setSelectedProduct(remainingProduct);
+      toast.info(`${playerToRemove.name} has been removed from your team`);
     }
   };
 
@@ -78,6 +88,17 @@ function App() {
         selectedProduct={selectedProduct}
         handleDelete={handleDelete}
       ></ContentContainer>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }
