@@ -1,4 +1,4 @@
-# <img width="40px" src="./src/assets/images/logo.png"/> BPL-DREAM 11
+# <img width="40px" src="./src/assets/images/logo.png"/> [BPL-DREAM 11](https://assaignment-7-raufur.surge.sh)
 
 A web application that allows users to participate in cricket player bidding. The platform offers a simulated environment for selecting and managing players, complete with budget management and player statistics.
 
@@ -19,7 +19,3 @@ Welcome to **BPL-DREAM 11**. The Cricket Player Bidding Website enables users to
 1. **Player Selection and Management:** Choose your favorite cricket players from various countries, manage your team within the coin budget, and handle player selection dynamically.
 2. **Real-time Coin Management:** Track your coin balance in real-time as you add or remove players, ensuring that you stay within budget.
 3. **User-friendly Interface:** Responsive design for a seamless experience on both desktop and mobile, with notifications and smooth navigation.
-
-## Live Site Link:
-
-You can visit the live site here: [BPL-DREAM 11 Live Site](https://assaignment-7-raufur.surge.sh)

@@ -1,5 +1,4 @@
 import Available from "../Available/Available";
-import Footer from "../Footer/Footer";
 import Selected from "../Selected/Selected";
 import PropTypes from "prop-types";
 
@@ -15,9 +14,8 @@ const ContentContainer = ({
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-2 relative">
-      {/* Button Area and Header Section */}
-      <div className="flex justify-between items-center mt-4 mb-2">
+    <div className=" relative">
+      <div className="max-w-7xl mx-auto py-2 flex justify-between items-center mt-4 mb-2">
         <div className="flex items-center gap-4">
           <h2 className="text-2xl font-semibold ml-10 mt-3">
             {isActive.available
@@ -44,8 +42,7 @@ const ContentContainer = ({
           </div>
         </div>
       </div>
-      {/* Available / Selected Container */}
-      <div className="absolute top-16 left-0 w-full px-10 py-2">
+      <div className="absolute top-16 left-0 w-full py-2">
         {isActive.available ? (
           <Available handleSelectedProduct={handleSelectedProduct}></Available>
         ) : (

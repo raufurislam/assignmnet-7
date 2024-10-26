@@ -2,14 +2,11 @@ import PropTypes from "prop-types";
 import Footer from "../Footer/Footer";
 
 const Selected = ({ onAddPlayerClick, selectedProduct, handleDelete }) => {
-  // console.log(selectedProduct);
   console.log(selectedProduct);
   return (
     <div className="w-full h-screen mt-10">
-      {/* cart */}
-      <div>
+      <div className="max-w-7xl mx-auto px-10 py-2">
         {selectedProduct.map((product) => (
-          // const {image, name, role, battingType}=product
           // eslint-disable-next-line react/jsx-key
           <div className="flex justify-between items-center border p-4 mb-4 rounded-lg">
             <div className="flex gap-4 items-center">
@@ -42,7 +39,7 @@ const Selected = ({ onAddPlayerClick, selectedProduct, handleDelete }) => {
         ))}
       </div>
       <div className="w-full "></div>
-      <div>
+      <div className="max-w-7xl mx-auto px-10 py-2">
         <div className="border p-1 rounded-lg inline-flex">
           <button
             onClick={onAddPlayerClick}

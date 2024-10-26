@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 const SingleProduct = ({ product, handleSelectedProduct }) => {
   const { name, country, image, role, battingType, bowlingType, biddingPrice } =
     product;
-  // console.log(handleSelectedProduct);
   return (
     <div className="border rounded-lg p-4 w-full">
       <img className="w-full h-52 object-cover rounded-lg" src={image} alt="" />
@@ -57,6 +56,7 @@ const SingleProduct = ({ product, handleSelectedProduct }) => {
 
 SingleProduct.propTypes = {
   product: PropTypes.object.isRequired,
+  handleSelectedProduct: PropTypes.func.isRequired,
 };
 
 export default SingleProduct;
