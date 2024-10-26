@@ -20,12 +20,14 @@ const Banner = ({ addCoins }) => {
         <h3 className="text-2xl text-gray-300">
           Beyond Boundaries Beyond Limits
         </h3>
-        <button
-          onClick={() => addCoins(5000000)}
-          className="btn bg-lime-500 text-black border-none"
-        >
-          Claims Free Credits
-        </button>
+        <div className="inline-flex border border-lime-400 p-1 rounded-xl">
+          <button
+            onClick={() => addCoins(5000000)}
+            className="btn bg-lime-400 text-black border-none  font-bold"
+          >
+            Claims Free Credits
+          </button>
+        </div>
       </div>
     </div>
   );

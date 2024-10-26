@@ -5,6 +5,7 @@ import ContentContainer from "./components/ContentContainer/ContentContainer";
 import Navbar from "./components/Navbar/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   // state declear
@@ -88,6 +89,7 @@ function App() {
         selectedProduct={selectedProduct}
         handleDelete={handleDelete}
       ></ContentContainer>
+      {/* <Footer></Footer> */}
       <ToastContainer
         position="top-center"
         autoClose={3000}

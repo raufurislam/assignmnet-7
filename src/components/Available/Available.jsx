@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SingleProduct from "../SingleProduct/SingleProduct";
+import Footer from "../Footer/Footer";
 
 const Available = ({ handleSelectedProduct }) => {
   const [products, setProducts] = useState([]);
@@ -13,8 +14,6 @@ const Available = ({ handleSelectedProduct }) => {
 
   return (
     <div className="w-full h-screen mt-10">
-      <h2 className="text-2xl font-semibold pt-3 mb-8">Aailable Players</h2>
-
       <div className="grid grid-cols-3 gap-4 w-full">
         {products.map((p) => (
           <SingleProduct
@@ -24,6 +23,7 @@ const Available = ({ handleSelectedProduct }) => {
           ></SingleProduct>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -35,7 +35,14 @@ const SingleProduct = ({ product, handleSelectedProduct }) => {
         </div>
         {/* 3 */}
         <div className="flex justify-between items-center">
-          <div>{biddingPrice}</div>
+          <div className="flex gap-2 items-center">
+            <img
+              className="w-7"
+              src="https://img.icons8.com/?size=48&id=sPBQkuep9vDA&format=png"
+              alt=""
+            />
+            {biddingPrice}
+          </div>
           <button
             onClick={() => handleSelectedProduct(product)}
             className="btn btn-sm bg-transparent border"

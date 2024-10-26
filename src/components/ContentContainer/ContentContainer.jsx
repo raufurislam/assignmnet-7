@@ -1,4 +1,5 @@
 import Available from "../Available/Available";
+import Footer from "../Footer/Footer";
 import Selected from "../Selected/Selected";
 import PropTypes from "prop-types";
 
@@ -9,21 +10,26 @@ const ContentContainer = ({
   selectedProduct,
   handleDelete,
 }) => {
-  // console.log(isActive);
-  // hander for add more player
   const handleAddPlayerClick = () => {
-    handleIsActiveStatus("available"); // Change to available when button is clicked
+    handleIsActiveStatus("available");
   };
+
   return (
-    <div className="max-w-7xl mx-auto px-10 py-2 relative">
-      {/* btn area  */}
-      <div className="flex justify-between absolute top-0 right-10 z-10 mt-10">
-        <div></div>
-        <div className="flex gap-3">
+    <div className="max-w-7xl mx-auto py-2 relative">
+      {/* Button Area and Header Section */}
+      <div className="flex justify-between items-center mt-4 mb-2">
+        <div className="flex items-center gap-4">
+          <h2 className="text-2xl font-semibold ml-10 mt-3">
+            {isActive.available
+              ? "Available Players"
+              : `Selected Players (${selectedProduct.length}/6)`}
+          </h2>
+        </div>
+        <div className="flex gap-3 px-10">
           <div
             onClick={() => handleIsActiveStatus("available")}
             className={`${
-              isActive.available ? "btn bg-lime-500 text-white" : "btn"
+              isActive.available ? "btn bg-lime-400 font-bold" : "btn font-bold"
             }`}
           >
             Available
@@ -31,15 +37,15 @@ const ContentContainer = ({
           <div
             onClick={() => handleIsActiveStatus("about")}
             className={`${
-              isActive.available ? "btn " : "btn bg-lime-500 text-white"
+              isActive.available ? "btn font-bold" : "btn bg-lime-400 font-bold"
             }`}
           >
             Selected ({selectedProduct.length})
           </div>
         </div>
       </div>
-      {/* available / selected container  */}
-      <div className="absolute -top-3 right-0 w-full px-10 py-2">
+      {/* Available / Selected Container */}
+      <div className="absolute top-16 left-0 w-full px-10 py-2">
         {isActive.available ? (
           <Available handleSelectedProduct={handleSelectedProduct}></Available>
         ) : (
@@ -53,8 +59,13 @@ const ContentContainer = ({
     </div>
   );
 };
+
 ContentContainer.propTypes = {
   handleIsActiveStatus: PropTypes.func.isRequired,
   isActive: PropTypes.object.isRequired,
+  handleSelectedProduct: PropTypes.func.isRequired,
+  selectedProduct: PropTypes.array.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
+
 export default ContentContainer;
