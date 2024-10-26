@@ -1,10 +1,4 @@
-## Private For your Assignment
-
-you have to create private repo in our Google Classroom . here is the Link
-
-# [https://classroom.github.com/a/8giEjBQc](https://classroom.github.com/a/8giEjBQc)
-
-# <img width="30px" src="assets/images/logo.png"/> BPL-DREAM 11
+# <img width="30px" src="./src/assets/images/logo.png"/> BPL-DREAM 11
 
 Welcome to **Assignment -07**. This assignment involves building a React-based application where users can select and manage cricket players for a team, following the design from Figma. You'll create a responsive UI, handle player selection, coin limitations, and complete the system following the requirements written below:
 
