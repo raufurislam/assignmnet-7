@@ -10,10 +10,9 @@ Welcome to **BPL-DREAM 11**. The Cricket Player Bidding Website enables users to
 
 ## Technologies Used
 
-- Technologies Used
-- React Toastify
-- React Toastify
+- React
 - JavaScript (ES6)
+- React Toastify
 
 ## Key Features
 
@@ -23,4 +22,4 @@ Welcome to **BPL-DREAM 11**. The Cricket Player Bidding Website enables users to
 
 ## Live Site Link:
 
-**assaignment-7-raufur.surge.sh**
+You can visit the live site here: [BPL-DREAM 11 Live Site](https://assaignment-7-raufur.surge.sh)
