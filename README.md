@@ -4,6 +4,8 @@ A web application that allows users to participate in cricket player bidding. Th
 
 ## Description
 
+<!-- ## Description -->
+
 Welcome to **BPL-DREAM 11**. The Cricket Player Bidding Website enables users to create their own dream cricket team by bidding on players. Users can add coins, manage their budget, and select a maximum of six players based on their bidding price and skills. The site provides a dynamic experience, allowing users to add or remove players while keeping track of their coin balance.
 
 ---
